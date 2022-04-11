@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="/index.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="title">
+                <img src="/assets/logo.svg">
+            </div>
+            <div class="score">
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <div class="hands" id="hands">
+            <button class="paper circle" onclick="pickHand('paper')">
+                <span class="hands-bg">
+                    <img src="/assets/icon-paper.svg" />
+                </span>
+            </button>
+            <button class="scissors circle" onclick="pickHand('scissors')">
+                <span class="hands-bg">
+                    <img src="/assets/icon-scissors.svg" />
+                </span>
+            </button>
+            <button class="rock circle" onclick="pickHand('rock')">
+                <span class="hands-bg">
+                    <img src="/assets/icon-rock.svg" />
+                </span>
+            </button>
+        </div>
+        <div class="picked" id="picked">
+            <div class="user">
+                <h1>YOU PICKED</h1>
+                <button class="circle" id="userpickedCircle">
+                    <span class="hands-bg">
+                        <img id="userPickedImage" src="/assets/icon-paper.svg" />
+                    </span>
+                </button>
+            </div>
+            <div class="result">
+                <div class="win">
+                    <h1> YOU WIN! </h1>
+                </div>
+                <div class="playAgain" onclick="restart()">PLAY AGAIN</div>
+            </div>
+            <div class="computer">
+                <h1>THE HOUSE PICKED</h1>
+                <button class="circle" id="computerpickedCircle">
+                    <span class="hands-bg">
+                        <img id="computerPickImage" src="/assets/icon-paper.svg" />
+                    </span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
