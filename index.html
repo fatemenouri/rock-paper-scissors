@@ -24,23 +24,76 @@
                 <h1>0</h1>
             </div>
         </div>
+
+        <div class="chooseLevel" id="chooseLevel">
+            <h1>CHOOSE YOUR LEVEL</h1>
+            <div class="button" onclick="choose('simple')">PLAY 3 HANDS</div>
+            <div class="button" onclick="choose('pro')">PLAY 5 HANDS</div>
+        </div>
+
+
         <div class="hands" id="hands">
-            <button class="paper circle" onclick="pickHand('paper')">
+            <button class="paper circle right" onclick="pickHand('paper',true)">
                 <span class="hands-bg">
                     <img src="/assets/icon-paper.svg" />
                 </span>
             </button>
-            <button class="scissors circle" onclick="pickHand('scissors')">
+            <button class="scissors circle left" onclick="pickHand('scissors',true)">
                 <span class="hands-bg">
                     <img src="/assets/icon-scissors.svg" />
                 </span>
             </button>
-            <button class="rock circle" onclick="pickHand('rock')">
+            <button class="rock circle" onclick="pickHand('rock',true)">
                 <span class="hands-bg">
                     <img src="/assets/icon-rock.svg" />
                 </span>
             </button>
         </div>
+
+        <div class="fivehands" id="fivehands">
+            <button class="spock circle paper-spock-margin" onclick="pickHand('spock',false)">
+                <span class="hands-bg">
+                    <img src="/assets/icon-spock.svg" />
+                </span>
+            </button>
+            <button class="scissors circle scissors-margin" onclick="pickHand('scissors',false)">
+                <span class="hands-bg">
+                    <img src="/assets/icon-scissors.svg" />
+                </span>
+            </button>
+            <button class="paper circle paper-spock-margin" onclick="pickHand('paper',false)">
+                <span class="hands-bg">
+                    <img src="/assets/icon-paper.svg" />
+                </span>
+            </button>
+            <button class="lizard circle lizard-rock-margin" onclick="pickHand('lizard',false)">
+                <span class="hands-bg">
+                    <img src="/assets/icon-lizard.svg" />
+                </span>
+            </button>
+            <button class="rock circle lizard-rock-margin" onclick="pickHand('rock',false)">
+                <span class="hands-bg">
+                    <img src="/assets/icon-rock.svg" />
+                </span>
+            </button>
+        </div>
+
+        <!-- <div class="button-winner">
+            <div class="user-winner-bg-gparent">
+                <div class="winner-bg-parent">
+                    <div class="winner-bg-child">
+
+                    </div>
+                </div>
+            </div>
+            <div class="computer-winner-bg-gparent">
+                <div class="winner-bg-parent">
+                    <div class="winner-bg-child">
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div class="picked" id="picked">
             <div class="user">
                 <h1>YOU PICKED</h1>
@@ -50,15 +103,15 @@
                     </span>
                 </button>
             </div>
-            <div class="result">
+            <div class="result" id="result">
                 <div class="win">
                     <h1> YOU WIN! </h1>
                 </div>
-                <div class="playAgain" onclick="restart()">PLAY AGAIN</div>
+                <div class="button" onclick="restart()">PLAY AGAIN</div>
             </div>
             <div class="computer">
                 <h1>THE HOUSE PICKED</h1>
-                <button class="circle" id="computerpickedCircle">
+                <button class="circle fade-in" id="computerpickedCircle">
                     <span class="hands-bg">
                         <img id="computerPickedImage" src="/assets/icon-paper.svg" />
                     </span>
