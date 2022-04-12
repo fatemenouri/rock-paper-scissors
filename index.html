@@ -50,6 +50,7 @@
             </button>
         </div>
 
+
         <div class="fivehands" id="fivehands">
             <button class="spock circle paper-spock-margin" onclick="pickHand('spock',false)">
                 <span class="hands-bg">
@@ -118,7 +119,16 @@
                 </button>
             </div>
         </div>
-
+        <div class="rules" onclick="showRules()">
+            <p>RULES</p>
+        </div>
+        <div class="rules-card" id="rules-card">
+            <div class="rules-header">
+                <h2>RULES</h2>
+                <img class="close" id="close" onclick="closeRules()" src="/assets/icon-close.svg">
+            </div>
+            <img class="rule-img" id="rule-img" src="/assets/image-rules.svg">
+        </div>
     </div>
 </body>
 

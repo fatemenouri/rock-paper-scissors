@@ -5,15 +5,12 @@
 }
 
 body {
+    background: radial-gradient(circle at 50% 10%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     font-family: 'Barlow Semi Condensed', sans-serif;
+    min-height: 100vh;
 }
 
 .wrapper {
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(134.34% 134.34% at 50% 0%,
-            #1f3757 0%,
-            #131537 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,13 +263,19 @@ body {
 }
 
 .button {
-    color: hsl(349, 71%, 52%);
+    color: #2A46C0;
     background-color: white;
     padding: 12px 50px;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.15s;
     text-align: center;
+    font-size: 20px;
+    font-family: "Barlow", sans-serif;
+}
+
+.button:hover {
+    color: hsl(349, 70%, 56%);
 }
 
 .before {
@@ -354,4 +357,56 @@ body {
 
 .computer {
     z-index: 100;
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #606E85;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+.rules p {
+    color: #606E85;
+}
+
+.rules-card {
+    display: none;
+    padding: 20px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 8px;
+    border: 2px solid #606E85;
+    position: fixed;
+    top: 30%;
+}
+
+.rules-card h2 {
+    color: #606E85;
+}
+
+.rules-card .rules-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rule-img {
+    padding: 20px;
+}
+
+.close {
+    cursor: pointer;
 }

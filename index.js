@@ -252,3 +252,30 @@ function restart() {
     picked.style.display = "none";
     
 }
+
+function showRules(){
+    let handsSection = document.getElementById('hands');
+    let fiveHnadsSection = document.getElementById('fivehands');
+    if(handsSection.style.display == 'none' && fiveHnadsSection.style.display=='flex'){
+        console.log('here')
+        let rulesCard=document.getElementById('rules-card')
+        rulesCard.style.display="flex"
+        document.getElementById('rule-img').src = '/assets/image-rules-bonus.svg';
+    }
+    else if(handsSection.style.display == 'flex' && fiveHnadsSection.style.display=='none'){
+        let rulesCard=document.getElementById('rules-card')
+        rulesCard.style.display="flex"
+        document.getElementById('rule-img').src = '/assets/image-rules.svg';
+    }
+    else{
+        let rulesCard=document.getElementById('rules-card')
+        rulesCard.style.display="flex"
+        document.getElementById('rule-img').src= '/assets/image-rules.svg';
+    }
+    
+}
+
+function closeRules(){
+    let rulesCard=document.getElementById('rules-card')
+    rulesCard.style.display="none"
+}
