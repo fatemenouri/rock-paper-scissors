@@ -50,6 +50,25 @@ function pickHand(hand, isSimple) {
         //show second page
         let pickedSection = document.getElementById('picked');
         pickedSection.style.display = "flex";
+
+        let user=document.getElementById('user');
+        user.style.display='block'
+        user.classList.add('item')
+
+        document.addEventListener('animationend', () => {
+            let computer=document.getElementById('computer');
+            computer.style.display='block'
+            computer.classList.add('item-two')
+
+            document.addEventListener('animationend',()=>{
+                let res=document.getElementById('result');
+                res.style.display='block'
+                res.classList.add('item-three')
+
+            })
+          });
+
+        
         //set user picked image
         document.getElementById("userPickedImage").src = handOptions[hand];
         //add rockeor paper or scissors class
@@ -64,6 +83,25 @@ function pickHand(hand, isSimple) {
         //show second page
         let pickedSection = document.getElementById('picked');
         pickedSection.style.display = "flex";
+
+        
+        let user=document.getElementById('user');
+        user.style.display='block'
+        user.classList.add('item')
+
+        document.addEventListener('animationend', () => {
+            let computer=document.getElementById('computer');
+            computer.style.display='block'
+            computer.classList.add('item-two')
+
+            document.addEventListener('animationend',()=>{
+                let res=document.getElementById('result');
+                res.style.display='block'
+                res.classList.add('item-three')
+
+            })
+          });
+          
         //set user picked image
         document.getElementById("userPickedImage").src = fiveHandOption[hand];
         //add rockeor paper or scissors or lizard or spock class
@@ -239,6 +277,19 @@ function setScore(newScore) {
 }
 
 function restart() {
+
+    let userAnimationClass=document.getElementById('user');
+    userAnimationClass.style.display='none'
+    userAnimationClass.classList.remove('item');
+
+    let computerAnimationClass=document.getElementById('computer');
+    computerAnimationClass.style.display='none'
+    computerAnimationClass.classList.remove('item-two');
+
+    let resultAnimationClass=document.getElementById('result');
+    resultAnimationClass.style.display='none'
+    resultAnimationClass.classList.remove('item-three')
+
     //show choose level section
     let choosen = document.getElementById('chooseLevel')
     choosen.style.display = "flex"
@@ -259,6 +310,10 @@ function restart() {
     //hide second page
     let picked = document.getElementById("picked");
     picked.style.display = "none";
+
+    //remove animation clases
+
+
 
 }
 

@@ -24,6 +24,7 @@
                 <h1>0</h1>
             </div>
         </div>
+
         <div class="chooseLevel" id="chooseLevel">
             <h1>CHOOSE YOUR LEVEL</h1>
             <div class="button" onclick="choose('simple')">PLAY 3 HANDS</div>
@@ -78,7 +79,7 @@
             </button>
         </div>
         <div class="picked" id="picked">
-            <div class="user">
+            <div class="user" id="user">
                 <h1>YOU PICKED</h1>
                 <button class="circle" id="userpickedCircle">
                     <span class="hands-bg">
@@ -92,7 +93,7 @@
                 </div>
                 <div class="button" onclick="restart()">PLAY AGAIN</div>
             </div>
-            <div class="computer">
+            <div class="computer" id="computer">
                 <h1>THE HOUSE PICKED</h1>
                 <button class="circle fade-in" id="computerpickedCircle">
                     <span class="hands-bg">

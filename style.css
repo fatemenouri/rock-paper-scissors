@@ -216,7 +216,7 @@ body {
 
 .result h1 {
     font-size: 45px;
-    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
+    animation: shake 2s cubic-bezier(.40, .20, .20, .100) both;
     transform: translate3d(0, 0, 0);
 }
 
@@ -331,4 +331,34 @@ body {
 
 .close {
     cursor: pointer;
+}
+
+.user,
+.computer,
+.result {
+    display: none;
+}
+
+.item {
+    animation: fade_in_show 0.5s
+}
+
+.item-two {
+    animation: fade_in_show 1s
+}
+
+.item-three {
+    animation: fade_in_show 3s
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
 }
