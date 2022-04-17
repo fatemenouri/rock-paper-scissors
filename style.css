@@ -278,85 +278,8 @@ body {
     color: hsl(349, 70%, 56%);
 }
 
-.before {
-    cursor: pointer;
-    opacity: 0.1;
-    transition-duration: 5s;
-}
-
-.animate {
-    opacity: 1
-}
-
-.winner-bg-child {
-    border: none;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: #283e5b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.winner-bg-parent {
-    background-color: #20324b;
-    border: none;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -100px;
-    /* margin-left: -100px; */
-}
-
-.user-winner-bg-gparent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-color: rgb(46, 66, 92);
-    margin-right: 120px;
-    opacity: 0.5;
-}
-
-.computer-winner-bg-gparent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-color: rgb(46, 66, 92);
-    margin-left: 110px;
-    opacity: 0.5;
-}
-
-.button-winner {
-    display: flex;
-    flex: 1 1 0px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: -700px;
-}
-
 #userpickedCircle {
     margin: 0;
-}
-
-.user {
-    z-index: 100;
-}
-
-.computer {
-    z-index: 100;
 }
 
 .rules {
@@ -372,7 +295,6 @@ body {
     right: 30px;
     cursor: pointer;
 }
-
 
 .rules p {
     color: #606E85;
